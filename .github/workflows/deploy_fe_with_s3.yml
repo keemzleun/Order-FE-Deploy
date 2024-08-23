@@ -38,3 +38,9 @@ jobs:
 
       - name: clear s3 bucket
         run: aws s3 rm s3://www.keemzleun.shop/ --recursive
+      
+      - name: deploy to s3
+        run: aws s3 cp ./dist s3://www.keemzleun.shop/ --recursive
+
+      - name: invaildate cloudfront caches
+        run: aws cloudfront create-invaildation --distribution-id E2TWIHVMXH4OGI --paths "/*"
