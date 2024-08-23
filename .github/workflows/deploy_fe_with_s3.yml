@@ -43,4 +43,4 @@ jobs:
         run: aws s3 cp ./dist s3://www.keemzleun.shop/ --recursive
 
       - name: invaildate cloudfront caches
-        run: aws cloudfront create-invaildation --distribution-id E2TWIHVMXH4OGI --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id E2TWIHVMXH4OGI --paths "/*"
