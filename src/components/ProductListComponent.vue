@@ -154,7 +154,7 @@ export default{
                 }
 
                 // localhost:8081/product/list?category=fruits$size=5&page=0 또는 name=apple&size=5&page=0
-                const response = await axios.get(`${process.env.VUE_APP_API_BASE_URL}/product-service/product/list`, {params});
+                const response = await axios.get(`${process.env.VUE_APP_API_BASE_URL}/product/list`, {params});
                 const additionalData = response.data.result.content.map(p=>({...p, quantity:0}));
                 if (additionalData.length==0){
                     this.isLastPage = true;
