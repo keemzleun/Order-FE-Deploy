@@ -86,7 +86,7 @@ export default{
                     } 
                 }
                 // async, await가 없다면 우선 post를 던져두고 바로 push로 넘어가버
-                await axios.post(`${process.env.VUE_APP_API_BASE_URL}/member-service/member/create`, registerData);
+                await axios.post(`${process.env.VUE_APP_API_BASE_URL}/member/create`, registerData);
                 this.$router.push("/");
             } catch (e) {
                 const error_message = e.response.data.error_message;

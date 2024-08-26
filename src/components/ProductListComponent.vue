@@ -200,7 +200,7 @@ export default{
                 return;
             }
             try {
-                await axios.post(`${process.env.VUE_APP_API_BASE_URL}/order-service/order/create`, orderProducts);
+                await axios.post(`${process.env.VUE_APP_API_BASE_URL}/order/create`, orderProducts);
                 alert("주문 완료되었습니다");
             } catch(e){
                 console.log(e);

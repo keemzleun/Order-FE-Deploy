@@ -59,7 +59,7 @@ export default{
                 return;
             }
             try {
-                await axios.post(`${process.env.VUE_APP_API_BASE_URL}/order-service/ordering/create`, orderProducts);
+                await axios.post(`${process.env.VUE_APP_API_BASE_URL}/ordering/create`, orderProducts);
                 alert("주문 완료되었습니다");
                 this.clearCart();
             } catch(e){
